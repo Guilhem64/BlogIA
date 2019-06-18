@@ -41,7 +41,7 @@ color:
   neutral:
     white: &color-white '#ffffff'
     gray:
-      a: &color-gray-1 '#fafaf9'
+      a: &color-gray-1 '#65C6EC'
       b: &color-gray-2 '#f3f2f2'
       c: &color-gray-3 '#ecebea'
       d: '#dddbda'
@@ -136,12 +136,13 @@ hero:
     size: *font-size-xxl
     color: *color-white
     lineHeight: *font-line-height-xs
-  background: 'linear-gradient(0deg, #E0306E, #6438B5)'
+  background: *color-gray-1
 blog:
   h1:
     size: *font-size-l
     lineHeight: *font-line-height-xs
     hoverColor: *color-brand-primary
+  background: *color-gray-1
 header:
   height:
     default: 80px

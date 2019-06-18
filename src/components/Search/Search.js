@@ -10,8 +10,7 @@ const Search = props => {
   return (
     <React.Fragment>
       <div className="search">
-        {algolia &&
-          algolia.appId && (
+        {algolia && algolia.appId && (
             <InstantSearch
               appId={algolia.appId}
               apiKey={algolia.searchOnlyApiKey}

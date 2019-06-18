@@ -19,8 +19,8 @@ module.exports = {
   manifestName: "LegalBot",
   manifestShortName: "LegalBot", // max 12 characters
   manifestStartUrl: "/index.html",
-  manifestBackgroundColor: "white",
-  manifestThemeColor: "#666",
+  manifestBackgroundColor: "#65C6EC",
+  manifestThemeColor: "#65C6EC",
   manifestDisplay: "standalone",
 
   // gravatar
