@@ -15,8 +15,7 @@ pour commencer cliquer [ici](/Search)
 
 **LegalBot**
 
-instruction ici a taper 
-du type comment debuter 
+instruction ici
 
 
 
