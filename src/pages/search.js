@@ -24,10 +24,6 @@ const SearchPage = props => {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            <div className="icon">
-              <AlgoliaIcon />
-            </div>
-
             <Search algolia={algolia} theme={theme} />
           </Article>
         )}
@@ -39,7 +35,7 @@ const SearchPage = props => {
       <style jsx>{`
         .icon {
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           margin-bottom: 20px;
         }
         .icon :global(svg) {
