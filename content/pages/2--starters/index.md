@@ -5,6 +5,23 @@ menuTitle: Starters
 
 **Legal Bot**
 
-pour commencer cliquer [ici] 
+pour commencer cliquer [ici](/Search)
 
-[ici]: ./index.js "test lien"
+
+
+#Comment ca marche --->
+
+
+
+**LegalBot**
+
+instruction ici a taper 
+du type comment debuter 
+
+
+
+
+
+
+
+

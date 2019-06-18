@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "LegalBot", // <title>
   shortSiteTitle: "LegalBot", // <title> ending for posts and pages
   siteDescription: "Generator of bot",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteUrl: "https://",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
