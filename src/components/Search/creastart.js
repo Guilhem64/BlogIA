@@ -21,23 +21,23 @@ class Review extends Component {
   }
 
   render() {
-    const { nom, sexe, type } = this.state;
+    const { name, gender, age } = this.state;
     return (
-      <div>
-        <h3>Sommaire</h3>
+      <div style={{ width: '100%' }}>
+        <h3>Summary</h3>
         <table>
           <tbody>
             <tr>
-              <td>Nom : </td>
-              <td>{nom.value}</td>
+              <td>Name</td>
+              <td>{name.value}</td>
             </tr>
             <tr>
-              <td>Sexe : </td>
-              <td>{sexe.value}</td>
+              <td>Gender</td>
+              <td>{gender.value}</td>
             </tr>
             <tr>
-              <td>Type : </td>
-              <td>{type.value}</td>
+              <td>Age</td>
+              <td>{age.value}</td>
             </tr>
           </tbody>
         </table>
@@ -58,103 +58,107 @@ class SimpleForm extends Component {
   render() {
     return (
       <ChatBot
-                      headerTitle="Creation Bot"
-                      recognitionEnable={true}
-                        steps={[
-                            {
-                                id: '1',
-                                message: 'Quel nom voulez vous donner a votre bot ?',
-                                trigger: 'nom',
-                              },
-                              {
-                                id: 'nom',
-                                user: true,
-                                trigger: '3',
-                              },
-                              {
-                                id: '3',
-                                message: "Creation de '{previousValue}'! Choisissez le sexe de votre Bot ?",
-                                trigger: 'sexe',
-                              },
-                              {
-                                id: 'sexe',
-                                options: [
-                                  { value: 'homme', label: 'Homme', trigger: '5' },
-                                  { value: 'femme', label: 'Femme', trigger: '5' },
-                                ],
-                              },
-                              {
-                                id: '5',
-                                message: "Pourquel type de personnes s'adresse votre Bot",
-                                trigger: 'type',
-                              },
-                              {
-                                id: 'type',
-                                options: [
-                                    { value: 'Finance', label: 'Finance', trigger: '7' },
-                                    { value: 'Tchat', label: 'Tchat', trigger: '7' },
-                                    { value: 'Web', label: 'Web', trigger: '7' },
-                                    { value: 'E-commerce', label: 'E-commerce', trigger: '7' },
-                                    { value: 'Sport', label: 'Sport', trigger: '7' },
-                                ],
-                                  },
-                              {
-                                id: '7',
-                                message: 'Parfait, voila le recapitulatif',
-                                trigger: 'review',
-                              },
-                              {
-                                id: 'review',
-                                component: <Review />,
-                                asMessage: true,
-                                trigger: 'update',
-                              },
-                              {
-                                id: 'update',
-                                message: 'Voulez vous modifier une donnée ?',
-                                trigger: 'update-question',
-                              },
-                              {
-                                id: 'update-question',
-                                options: [
-                                  { value: 'yes', label: 'Oui', trigger: 'update-yes' },
-                                  { value: 'no', label: 'Non', trigger: 'end-message' },
-                                ],
-                              },
-                              {
-                                id: 'update-yes',
-                                message: 'Quel domaine souhaitez-vous mettre à jour?',
-                                trigger: 'update-fields',
-                              },
-                              {
-                                id: 'update-fields',
-                                options: [
-                                  { value: 'nom', label: 'Nom', trigger: 'update-nom' },
-                                  { value: 'sexe', label: 'Sexe', trigger: 'update-sexe' },
-                                  { value: 'type', label: 'Type', trigger: 'update-type' },
-                                ],
-                              },
-                              {
-                                id: 'update-nom',
-                                update: 'nom',
-                                trigger: '7',
-                              },
-                              {
-                                id: 'update-sexe',
-                                update: 'sexe',
-                                trigger: '7',
-                              },
-                              {
-                                id: 'update-type',
-                                update: 'type',
-                                trigger: '7',
-                              },
-                              {
-                                id: 'end-message',
-                                message: 'Merci, creation et mise a jour de votre base de donnée ! Vous pouvez des a presents basculer sur la fenetre boite a outils pour rajouter toutes les fonctionalitées que vous voulez',
-                                end: true,
-                              },
-                        ]}
+        steps={[
+          {
+            id: '1',
+            message: 'What is your name?',
+            trigger: 'name',
+          },
+          {
+            id: 'name',
+            user: true,
+            trigger: '3',
+          },
+          {
+            id: '3',
+            message: 'Hi {previousValue}! What is your gender?',
+            trigger: 'gender',
+          },
+          {
+            id: 'gender',
+            options: [
+              { value: 'male', label: 'Male', trigger: '5' },
+              { value: 'female', label: 'Female', trigger: '5' },
+            ],
+          },
+          {
+            id: '5',
+            message: 'How old are you?',
+            trigger: 'age',
+          },
+          {
+            id: 'age',
+            user: true,
+            trigger: '7',
+            validator: (value) => {
+              if (isNaN(value)) {
+                return 'value must be a number';
+              } else if (value < 0) {
+                return 'value must be positive';
+              } else if (value > 120) {
+                return `${value}? Come on!`;
+              }
+
+              return true;
+            },
+          },
+          {
+            id: '7',
+            message: 'Great! Check out your summary',
+            trigger: 'review',
+          },
+          {
+            id: 'review',
+            component: <Review />,
+            asMessage: true,
+            trigger: 'update',
+          },
+          {
+            id: 'update',
+            message: 'Would you like to update some field?',
+            trigger: 'update-question',
+          },
+          {
+            id: 'update-question',
+            options: [
+              { value: 'yes', label: 'Yes', trigger: 'update-yes' },
+              { value: 'no', label: 'No', trigger: 'end-message' },
+            ],
+          },
+          {
+            id: 'update-yes',
+            message: 'What field would you like to update?',
+            trigger: 'update-fields',
+          },
+          {
+            id: 'update-fields',
+            options: [
+              { value: 'name', label: 'Name', trigger: 'update-name' },
+              { value: 'gender', label: 'Gender', trigger: 'update-gender' },
+              { value: 'age', label: 'Age', trigger: 'update-age' },
+            ],
+          },
+          {
+            id: 'update-name',
+            update: 'name',
+            trigger: '7',
+          },
+          {
+            id: 'update-gender',
+            update: 'gender',
+            trigger: '7',
+          },
+          {
+            id: 'update-age',
+            update: 'age',
+            trigger: '7',
+          },
+          {
+            id: 'end-message',
+            message: 'Thanks! Your data was submitted successfully!',
+            end: true,
+          },
+        ]}
       />
     );
   }
