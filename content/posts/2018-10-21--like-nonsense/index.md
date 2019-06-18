@@ -1,5 +1,5 @@
 ---
-title: I like nonsense, it wakes up the brain cells
+title: J'aime les absurdités, ça réveille les cellules du cerveau
 category: "testimonies"
 cover: Background.jpg
 author: Team Phoenix
