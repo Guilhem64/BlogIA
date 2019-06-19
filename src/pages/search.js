@@ -8,7 +8,6 @@ import Search from "../components/Search";
 import { ThemeContext } from "../layouts";
 import Seo from "../components/Seo";
 
-import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo";
 
 const SearchPage = props => {
   const {
@@ -24,10 +23,6 @@ const SearchPage = props => {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            <div className="icon">
-              <AlgoliaIcon />
-            </div>
-
             <Search algolia={algolia} theme={theme} />
           </Article>
         )}
@@ -39,7 +34,7 @@ const SearchPage = props => {
       <style jsx>{`
         .icon {
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           margin-bottom: 20px;
         }
         .icon :global(svg) {

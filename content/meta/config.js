@@ -2,9 +2,9 @@ module.exports = {
   siteTitle: "LegalBot", // <title>
   shortSiteTitle: "LegalBot", // <title> ending for posts and pages
   siteDescription: "Generator of bot",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteUrl: "https://",
   // pathPrefix: "",
-  siteImage: "preview.jpg",
+  siteImage: "avatar.jpg",
   siteLanguage: "en",
 
   /* author */
@@ -19,8 +19,8 @@ module.exports = {
   manifestName: "LegalBot",
   manifestShortName: "LegalBot", // max 12 characters
   manifestStartUrl: "/index.html",
-  manifestBackgroundColor: "white",
-  manifestThemeColor: "#666",
+  manifestBackgroundColor: "#ADB9D3",
+  manifestThemeColor: "#ADB9D3",
   manifestDisplay: "standalone",
 
   // gravatar
