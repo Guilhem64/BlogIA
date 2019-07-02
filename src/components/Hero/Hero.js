@@ -12,6 +12,7 @@ const Hero = props => {
         <h1>
           Bienvenue sur&nbsp; <strong>LegalBot</strong> by Team Phoenix
         </h1>
+        <h2>Un site pour construire et implémenté votre Bot simplement</h2>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaRobot />
         </button>
@@ -34,7 +35,7 @@ const Hero = props => {
           padding-top: ${theme.header.height.homepage};
         }
 
-        h1 {
+        h1, h2 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
@@ -107,6 +108,10 @@ const Hero = props => {
             max-width: 90%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
           }
+          h2 {
+            max-width: 70%;
+            font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
+          }
 
           button {
             font-size: ${theme.font.size.l};
@@ -121,6 +126,11 @@ const Hero = props => {
           h1 {
             max-width: 80%;
             font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
+          }
+
+          h2 {
+            max-width: 50%;
+            font-size: ${`calc(${theme.hero.h1.size} * 0.5)`};
           }
 
           button {

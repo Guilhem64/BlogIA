@@ -24,7 +24,7 @@ class Review extends Component {
     const { nom, sexe, type } = this.state;
     return (
       <div style={{ width: '100%' }}>
-        <h3>Summary</h3>
+        <h3>Sommaire</h3>
         <table>
           <tbody>
             <tr>
@@ -58,12 +58,12 @@ class SimpleForm extends Component {
   render() {
     return (
       <ChatBot
-      headerTitle="Creation Bot"
+      headerTitle="Test Bot"
       recognitionEnable={true}
         steps={[
             {
                 id: '1',
-                message: 'Quel nom voulez vous donner a votre bot ?',
+                message: 'Bonjour, quel nom voulez vous donner a votre bot ?',
                 trigger: 'nom',
               },
               {

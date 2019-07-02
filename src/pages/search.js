@@ -23,7 +23,7 @@ const SearchPage = props => {
       <ThemeContext.Consumer>
         {theme => (
           <Article theme={theme}>
-            <Search algolia={algolia} theme={theme} />
+            <Search />
           </Article>
         )}
       </ThemeContext.Consumer>
