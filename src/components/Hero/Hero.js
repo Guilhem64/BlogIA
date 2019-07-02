@@ -10,9 +10,9 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          Bienvenue sur&nbsp; <strong>LegalBot</strong> by Team Phoenix
+          Bienvenue sur le&nbsp; <strong>Blog IA</strong> by Team Phoenix
         </h1>
-        <h2>Un site pour construire et implémenté votre Bot simplement</h2>
+        <h2>Un site sur l'actu de l'IA, la robotique et le web</h2>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaRobot />
         </button>

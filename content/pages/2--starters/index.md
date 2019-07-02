@@ -3,7 +3,7 @@ title: La creation commence ici
 menuTitle: Starters
 ---
 
-**Legal Bot**
+**Test IA**
 
 pour commencer cliquer [ici](/Search)
 
@@ -13,7 +13,7 @@ pour commencer cliquer [ici](/Search)
 
 
 
-**LegalBot**
+**Test IA**
 
 instruction ici
 

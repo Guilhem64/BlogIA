@@ -6,4 +6,4 @@ title: About
 
 ### Features:
 
-LegalBot by Team Phoenix
+Blog sur l'IA, la robotique et le web by Team Phoenix
